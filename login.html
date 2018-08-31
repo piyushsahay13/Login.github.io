@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Login and Registeration</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" type="image/x-icon" href="logotab.png">
+</head>
+<body>
+  <div class="login-page">
+    <div class="form">
+       <form class="register-form" action="data.php" method="post">
+         <p class="message1">Register</p>
+         <input type="text" placeholder="user-name" name="use">
+         <input type="password" placeholder="password" name="pass">
+         <input type="text" placeholder="email ID" name="eid">
+         <input type="tel" placeholder="contact no" name="cno">
+         <input type="number" placeholder="age" name="age">
+         <input type="submit" value="Register" class="butt" name="register">
+         <p class="message">Already Registered? <a href="#">Log in</a></p>
+       </form>
+       <form class="login-form" action="retrieve.php" method="post">
+         <p class="message1">Login</p>
+         <input type="text" placeholder="user-name" name="use">
+         <input type="password" placeholder="password" name="pas">
+         <input type="submit" name="login" value="Login" class="butt">
+         <p class="message">Not yet Registered? <a href="#">Register</a></p>
+       </form>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+  </script>
+  <script>
+    $('.message a').click(function(){
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+  </script>
+</body>
+</html>
